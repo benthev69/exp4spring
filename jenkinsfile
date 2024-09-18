@@ -18,14 +18,14 @@ pipeline {
             steps {
                 dir("exp4spring") {
                     sh "mvn clean install"
-                    sh "docker build -t docexp4spring ."
+                    sh "sudo docker build -t docexp4spring ."
                 }
             }
         }
         stage ("Run docker compose") {
             steps {
                 dir("exp4spring") {
-                    sh "docker compose up -d"
+                    sh "sudo docker compose up -d"
                 }
             }
         }
