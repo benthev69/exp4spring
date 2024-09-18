@@ -18,7 +18,7 @@ pipeline {
             steps {
                 dir("exp4spring") {
                     sh "mvn clean install"
-                    sh "docker build -t docexpi-spring ."
+                    sh "docker build -t docexp4spring ."
                 }
             }
         }
